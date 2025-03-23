@@ -6,24 +6,29 @@ import Navbar from '@/components/Navbar';
 const skills = [
   {
     category: 'DevOps & Cloud',
-    items: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Jenkins', 'Terraform'],
+    items: ['CI/CD'],
     icon: '🚀',
   },
   {
-    category: 'Programming',
-    items: ['Python', 'JavaScript', 'TypeScript', 'Node.js', 'React'],
+    category: 'Programming Languages',
+    items: ['JavaScript', 'TypeScript', 'Python', 'Java'],
     icon: '💻',
   },
   {
-    category: 'Tools & Technologies',
-    items: ['Git', 'Linux', 'Monitoring', 'Prometheus', 'Grafana'],
-    icon: '🛠️',
+    category: 'Web Technologies',
+    items: ['Node.js', 'React', 'Angular', 'Vue.js', 'Express.js', 'Django', 'Spring Boot'],
+    icon: '🌐',
   },
   {
-    category: 'Soft Skills',
-    items: ['Problem Solving', 'Team Collaboration', 'Communication', 'Leadership'],
-    icon: '🤝',
+    category: 'Databases',
+    items: ['MongoDB', 'MySQL'],
+    icon: '🗄️',
   },
+  {
+    category: 'Tools & Infrastructure',
+    items: ['Git', 'Linux'],
+    icon: '🛠️',
+  }
 ];
 
 export default function WhatICanDo() {

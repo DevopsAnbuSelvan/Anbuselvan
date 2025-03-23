@@ -13,69 +13,71 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-black fixed top-0 left-0 right-0 z-50">
+      <nav className="bg-black/90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
+            {/* Logo - Hidden on mobile, visible on md+ screens */}
             <div className="flex-shrink-0 hidden md:block">
-              <a href="/" className="text-white text-3xl font-bold">
+              <a href="/" className="text-white text-3xl font-bold hover:text-gray-300 transition-colors">
                 ANBU SELVAN
               </a>
             </div>
 
+            {/* Desktop Navigation - Hidden on mobile, flex on md+ screens */}
             <div className="hidden md:flex">
-              <div className="ml-4 flex items-center space-x-4">
+              <div className="ml-4 flex items-center space-x-4 lg:space-x-6">
                 <a
                   href="/"
-                  className={`text-xl text-white hover:text-white p-2 ${
-                    pathname === "/" ? "border-b-2 border-white" : ""
+                  className={`text-base lg:text-xl text-white hover:text-gray-300 p-2 transition-all ${
+                    pathname === "/" ? "border-b-2 border-white font-semibold" : ""
                   }`}
                 >
                   Home
                 </a>
                 <a
                   href="/about"
-                  className={`text-xl text-white hover:text-white p-2 ${
-                    pathname === "/about" ? "border-b-2 border-white" : ""
+                  className={`text-base lg:text-xl text-white hover:text-gray-300 p-2 transition-all ${
+                    pathname === "/about" ? "border-b-2 border-white font-semibold" : ""
                   }`}
                 >
                   About
                 </a>
                 <a
                   href="/education"
-                  className={`text-xl text-white hover:text-white p-2 ${
-                    pathname === "/education" ? "border-b-2 border-white" : ""
+                  className={`text-base lg:text-xl text-white hover:text-gray-300 p-2 transition-all ${
+                    pathname === "/education" ? "border-b-2 border-white font-semibold" : ""
                   }`}
                 >
                   Education
                 </a>
                 <a
                   href="/activities"
-                  className={`text-xl text-white hover:text-white p-2 ${
-                    pathname === "/activities" ? "border-b-2 border-white" : ""
+                  className={`text-base lg:text-xl text-white hover:text-gray-300 p-2 transition-all ${
+                    pathname === "/activities" ? "border-b-2 border-white font-semibold" : ""
                   }`}
                 >
                   Activities
                 </a>
                 <a
                   href="/projects"
-                  className={`text-xl text-white hover:text-white p-2 ${
-                    pathname === "/projects" ? "border-b-2 border-white" : ""
+                  className={`text-base lg:text-xl text-white hover:text-gray-300 p-2 transition-all ${
+                    pathname === "/projects" ? "border-b-2 border-white font-semibold" : ""
                   }`}
                 >
                   Projects
                 </a>
-                <a
+                {/* <a
                   href="/whatIcando"
-                  className={`text-xl text-white hover:text-white p-2 ${
-                    pathname === "/whatIcando" ? "border-b-2 border-white" : ""
+                  className={`text-base lg:text-xl text-white hover:text-gray-300 p-2 transition-all ${
+                    pathname === "/whatIcando" ? "border-b-2 border-white font-semibold" : ""
                   }`}
                 >
                   What I Can Do
-                </a>
+                </a> */}
                 <a
                   href="/contact"
-                  className={`text-xl text-white hover:text-white p-2 ${
-                    pathname === "/contact" ? "border-b-2 border-white" : ""
+                  className={`text-base lg:text-xl text-white hover:text-gray-300 p-2 transition-all ${
+                    pathname === "/contact" ? "border-b-2 border-white font-semibold" : ""
                   }`}
                 >
                   Contact
@@ -83,10 +85,12 @@ const Navbar = () => {
               </div>
             </div>
 
+            {/* Mobile Menu Button - Visible on mobile, hidden on md+ screens */}
             <div className="md:hidden flex items-center">
               <button
-                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors"
                 onClick={toggleNavbar}
+                aria-label="Toggle menu"
               >
                 {isClick ? (
                   <svg
@@ -124,53 +128,62 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* Mobile Menu - Slides down when menu button is clicked */}
         {isClick && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="md:hidden bg-black/95 backdrop-blur-sm">
+            <div className="px-4 pt-2 pb-3 space-y-2">
               <a
                 href="/"
-                className={`block text-xl text-white hover:text-white p-2 ${
-                  pathname === "/" ? "border-b-2 border-white" : ""
+                className={`block text-lg text-white hover:text-gray-300 p-3 rounded-lg transition-all ${
+                  pathname === "/" ? "bg-gray-800 font-semibold" : ""
                 }`}
               >
                 Home
               </a>
               <a
                 href="/about"
-                className={`block text-xl text-white hover:text-white p-2 ${
-                  pathname === "/about" ? "border-b-2 border-white" : ""
+                className={`block text-lg text-white hover:text-gray-300 p-3 rounded-lg transition-all ${
+                  pathname === "/about" ? "bg-gray-800 font-semibold" : ""
                 }`}
               >
                 About
               </a>
               <a
                 href="/education"
-                className={`block text-xl text-white hover:text-white p-2 ${
-                  pathname === "/education" ? "border-b-2 border-white" : ""
+                className={`block text-lg text-white hover:text-gray-300 p-3 rounded-lg transition-all ${
+                  pathname === "/education" ? "bg-gray-800 font-semibold" : ""
                 }`}
               >
                 Education
               </a>
               <a
                 href="/activities"
-                className={`block text-xl text-white hover:text-white p-2 ${
-                  pathname === "/activities" ? "border-b-2 border-white" : ""
+                className={`block text-lg text-white hover:text-gray-300 p-3 rounded-lg transition-all ${
+                  pathname === "/activities" ? "bg-gray-800 font-semibold" : ""
                 }`}
               >
                 Activities
               </a>
               <a
                 href="/projects"
-                className={`block text-xl text-white hover:text-white p-2 ${
-                  pathname === "/projects" ? "border-b-2 border-white" : ""
+                className={`block text-lg text-white hover:text-gray-300 p-3 rounded-lg transition-all ${
+                  pathname === "/projects" ? "bg-gray-800 font-semibold" : ""
                 }`}
               >
                 Projects
               </a>
+              {/* <a
+                href="/whatIcando"
+                className={`block text-lg text-white hover:text-gray-300 p-3 rounded-lg transition-all ${
+                  pathname === "/whatIcando" ? "bg-gray-800 font-semibold" : ""
+                }`}
+              >
+                What I Can Do
+              </a> */}
               <a
                 href="/contact"
-                className={`block text-xl text-white hover:text-white p-2 ${
-                  pathname === "/contact" ? "border-b-2 border-white" : ""
+                className={`block text-lg text-white hover:text-gray-300 p-3 rounded-lg transition-all ${
+                  pathname === "/contact" ? "bg-gray-800 font-semibold" : ""
                 }`}
               >
                 Contact
@@ -180,6 +193,7 @@ const Navbar = () => {
         )}
       </nav>
 
+      {/* Spacer to prevent content from hiding under fixed navbar */}
       <div className="pt-16"></div>
     </>
   );

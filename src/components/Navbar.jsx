@@ -65,6 +65,14 @@ const Navbar = () => {
                   Projects
                 </a>
                 <a
+                  href="/whatIcando"
+                  className={`text-xl text-white hover:text-white p-2 ${
+                    pathname === "/whatIcando" ? "border-b-2 border-white" : ""
+                  }`}
+                >
+                  What I Can Do
+                </a>
+                <a
                   href="/contact"
                   className={`text-xl text-white hover:text-white p-2 ${
                     pathname === "/contact" ? "border-b-2 border-white" : ""

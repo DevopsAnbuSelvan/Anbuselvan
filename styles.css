@@ -405,67 +405,62 @@ section h2 {
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     transition: all var(--transition-speed) ease;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
 
-.skill-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
-    transition: all 0.5s ease;
+.skill-item i {
+    font-size: 1.8rem;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: all var(--transition-speed) ease;
+    color: var(--primary-color);
 }
 
-.skill-item:hover::before {
-    left: 100%;
+.skill-item span {
+    font-size: 1rem;
+    font-weight: 500;
+    flex: 1;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
+    transform: translateX(10px);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow-md);
 }
 
-.skill-item i {
-    font-size: 1.5rem;
-    transition: all var(--transition-speed) ease;
-}
-
 .skill-item:hover i {
-    transform: scale(1.2) rotate(360deg);
+    transform: scale(1.1) rotate(5deg);
+    background: var(--primary-color);
+    color: var(--bg-color);
 }
 
-/* Specific icon colors */
-.skill-item .fa-html5 { color: #E44D26; }
-.skill-item .fa-css3-alt { color: #264DE4; }
-.skill-item .fa-js { color: #F7DF1E; }
-.skill-item .fa-python { color: #3776AB; }
-.skill-item .fa-java { color: #007396; }
-.skill-item .fa-microsoft { color: #00A4EF; }
-.skill-item .fa-react { color: #61DAFB; }
-.skill-item .fa-angular { color: #DD0031; }
-.skill-item .fa-vuejs { color: #4FC08D; }
-.skill-item .fa-node-js { color: #339933; }
-.skill-item .fa-bolt { color: #FFD700; }
-.skill-item .fa-database { color: #4479BA; }
-.skill-item .fa-terminal { color: #00FF00; }
-.skill-item .fa-robot { color: #FF6200; }
-.skill-item .fa-brain { color: #FF69B4; }
-.skill-item .fa-paper-plane { color: #1E90FF; }
-.skill-item .fa-apple { color: #A2AAAD; }
-.skill-item .fa-android { color: #3DDC84; }
+/* Specific icon colors on hover */
+.skill-item:hover .fa-html5 { color: #E44D26; }
+.skill-item:hover .fa-css3-alt { color: #264DE4; }
+.skill-item:hover .fa-js { color: #F7DF1E; }
+.skill-item:hover .fa-react { color: #61DAFB; }
+.skill-item:hover .fa-node-js { color: #339933; }
+.skill-item:hover .fa-github { color: #171515; }
+.skill-item:hover .fa-android { color: #3DDC84; }
+.skill-item:hover .fa-apple { color: #555555; }
+.skill-item:hover .fa-fire { color: #FFA000; }
+.skill-item:hover .fa-database { color: #4479BA; }
+.skill-item:hover .fa-terminal { color: #4CAF50; }
+.skill-item:hover .fa-code { color: #FF4081; }
+.skill-item:hover .fa-robot { color: #00BCD4; }
+.skill-item:hover .fa-brain { color: #9C27B0; }
+.skill-item:hover .fa-bolt { color: #FFC107; }
+.skill-item:hover .fa-cloud { color: #03A9F4; }
+.skill-item:hover .fa-wind { color: #00BCD4; }
 
 .progress-bar {
     width: 100%;
@@ -1007,7 +1002,7 @@ h2 i {
 
 /* Enhanced hover effects */
 .skill-item:hover {
-    transform: translateY(-5px);
+    transform: translateX(10px);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow-md);
 }

@@ -713,7 +713,7 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     section {
@@ -725,7 +725,22 @@ footer {
     }
     
     .hero-content {
-        margin-top: -60px;
+        margin-top: 20px; /* Changed from -60px to 20px */
+    }
+
+    .profile-image {
+        width: 200px; /* Reduced size for better mobile view */
+        height: 200px;
+        margin-top: 60px; /* Added margin-top to create space below navbar */
+    }
+
+    .hero {
+        padding-top: 80px; /* Adjusted padding */
+    }
+
+    .intro {
+        font-size: 1.2rem; /* Reduced font size for mobile */
+        margin-bottom: 0.5rem;
     }
 
     .about-text {

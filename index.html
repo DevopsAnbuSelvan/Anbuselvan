@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anbu Selvan</title>
-    <link rel="icon" type="image/x-icon" href="https://cdn.iconscout.com/icon/free/png-256/free-a-alphabet-letter-capital-uppercase-32801.png">
+    <link rel="icon" type="image/x-icon" href="https://anbuselvanofficial.web.app/images/Logo.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="loader-wrapper">
+        <div class="infinity-loader">
+            <svg class="infinity-svg" viewBox="0 0 100 60" width="100" height="60">
+                <path class="infinity-path" d="M20,30 C20,15 35,15 40,30 C45,45 60,45 60,30 C60,15 45,15 40,30 C35,45 20,45 20,30" />
+            </svg>
+        </div>
+    </div>
     <nav class="navbar">
         <div class="nav-brand">ANBU SELVAN</div>
         <ul class="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <!-- <li><a href="#projects">Projects</a></li> -->
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -26,12 +32,15 @@
         </div>
     </nav>
     <section id="home" class="hero">    
+        <div class="profile-image">
+            <img src="https://anbuselvanofficial.web.app/images/Photo1.png" alt="Anbu Selvan Profile Picture">
+        </div>
         <div class="hero-content">
             <p class="intro">HI THERE !</p>
             <h1>I'M <span class="highlight">ANBU SELVAN</span></h1>
             <p class="typewriter">I'm a <span id="typing-text"></span></p>
             
-            <p class="typewriter"><i>Currently working as a Mobile App Developer at </i><a target="_blank" href="https://wonchance.com" style="color: inherit; font-weight: bold; text-decoration: none;">Wonchance</a><i> - a Casting Platform</i></p>
+            <p class="typewriter"><i>Currently working as Mobile App Developer at </i><a target="_blank" href="https://wonchance.com" style="color: inherit; font-weight: bold; text-decoration: none;">Wonchance</a><i> - a Casting Platform</i></p>
             <div class="cta-buttons">
                 <a href="#about" class="cta-secondary">
                     <i class="fas fa-user"></i> About Me
@@ -48,23 +57,13 @@
         <div class="about-content">
             <div class="about-text">
                 <div class="about-details">
-                    <p><i class="fas fa-user"></i> Name: ANBU SELVAN R</p>
-                    <p><i class="fas fa-calendar"></i> Date of Birth: 19 Aug 2001</p>
-                    <p><i class="fas fa-graduation-cap"></i> Qualification: MCA</p>
-                    <p><i class="fas fa-heart"></i> Marital Status: Single</p>
-                    <p><i class="fas fa-flag"></i> Nationality: Indian</p>
-                    <p><i class="fas fa-language"></i> Language Known: English</p>
+                    <p><i class="fas fa-user"></i> Name : ANBU SELVAN R</p>
+                    <p><i class="fas fa-calendar"></i> Date of Birth : 19 Aug 2001</p>
+                    <p><i class="fas fa-graduation-cap"></i> Qualification : MCA</p>
+                    <p><i class="fas fa-heart"></i> Marital Status :    Single</p>
+                    <p><i class="fas fa-flag"></i> Nationality :    Indian</p>
+                    <p><i class="fas fa-language"></i> Language Known : English</p>
                 </div>
-                <!-- <div class="stats">
-                    <div class="stat-item">
-                        <h3>BEGINNER</h3>
-                        <p>in SOFTWARE DEVELOPMENT</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>2+</h3>
-                        <p>Projects completed</p>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -239,53 +238,81 @@
         </div>
     </section>
 
-    <!-- <section id="projects" class="projects">
-        <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-header">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile App Development</h3>
-                </div>
-                <div class="project-body">
-                    <p>Developed cross-platform mobile applications using React Native and Flutter frameworks. Implemented features like real-time updates and offline storage.</p>
-                    <div class="project-tech">
-                        <span>React Native</span>
-                        <span>Flutter</span>
-                        <span>Firebase</span>
+    <section id="mobile-showcase" class="mobile-showcase">
+        <h2><i class="fas fa-mobile-alt"></i>Mobile Development</h2>
+        <div class="devices-container">
+            <div class="phone android">
+                <div class="phone-frame">
+                    <div class="phone-content">
+                        <div class="status-bar">
+                            <div class="time">9:41</div>
+                            <div class="icons">
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-full"></i>
+                            </div>
+                        </div>
+                        <div class="app-content">
+                            <div class="app-header">
+                                <h3>Android App</h3>
+                            </div>
+                            <div class="app-body">
+                                <div class="feature-item">
+                                    <i class="fab fa-react" style="color: black;"></i>
+                                    <span>React Native</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fab fa-android"></i>
+                                    <span>Native Android</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Flutter</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="phone-label">Android App Development</div>
             </div>
-            <div class="project-card">
-                <div class="project-header">
-                    <i class="fas fa-globe"></i>
-                    <h3>Web Development</h3>
-                </div>
-                <div class="project-body">
-                    <p>Created responsive web applications using React and .NET technologies. Focused on user experience and modern design principles.</p>
-                    <div class="project-tech">
-                        <span>React</span>
-                        <span>.NET</span>
-                        <span>SQL</span>
+
+            <div class="phone ios">
+                <div class="phone-frame">
+                    <div class="phone-content">
+                        <div class="status-bar">
+                            <div class="notch"></div>
+                            <div class="time">9:41</div>
+                            <div class="icons">
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-full"></i>
+                            </div>
+                        </div>
+                        <div class="app-content">
+                            <div class="app-header">
+                                <h3>iOS App</h3>
+                            </div>
+                            <div class="app-body">
+                                <div class="feature-item">
+                                    <i class="fab fa-apple"></i>
+                                    <span>iOS Native</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fab fa-react" style="color: black;"></i>
+                                    <span>React Native</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Flutter</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-header">
-                    <i class="fas fa-robot"></i>
-                    <h3>DevOps Implementation</h3>
-                </div>
-                <div class="project-body">
-                    <p>Set up CI/CD pipelines and implemented DevOps practices for efficient software delivery and deployment.</p>
-                    <div class="project-tech">
-                        <span>Jenkins</span>
-                        <span>Docker</span>
-                        <span>Git</span>
-                    </div>
-                </div>
+                <div class="phone-label">iOS App Development</div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section id="education" class="education">
         <h2><i class="fas fa-graduation-cap"></i> My Education</h2>
@@ -371,10 +398,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <footer>
-        <p>&copy; 2024 Anbu Selvan. All rights reserved.</p>
-    </footer> -->
 
     <script src="script.js"></script>
 </body>

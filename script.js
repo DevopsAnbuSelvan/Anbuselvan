@@ -1,3 +1,23 @@
+// Loader functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const loaderWrapper = document.querySelector('.loader-wrapper');
+    
+    // Show loader for 1 second
+    setTimeout(() => {
+        loaderWrapper.classList.add('fade-out');
+        setTimeout(() => {
+            loaderWrapper.style.display = 'none';
+        }, 300); // Wait for fade animation to complete
+    }, 1000);
+});
+
+// Handle page refresh
+window.addEventListener('beforeunload', () => {
+    const loaderWrapper = document.querySelector('.loader-wrapper');
+    loaderWrapper.style.display = 'flex';
+    loaderWrapper.classList.remove('fade-out');
+});
+
 // Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -15,27 +35,35 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 });
 
 // Typing Animation
-const texts = ['Web Developer', 'Android App Developer', 'iOS App Developer', 'DevOps Engineer'];
+const texts = ['iOS App Developer ', 'Android App Developer ', 'Web Developer ', 'Software Developer ', 'DevOps Engineer '];
 let count = 0;
 let index = 0;
 let currentText = '';
 let letter = '';
+let isDeleting = false;
 
 function type() {
-    if (count === texts.length) {
-        count = 0;
-    }
     currentText = texts[count];
-    letter = currentText.slice(0, ++index);
+    
+    if (!isDeleting) {
+        letter = currentText.slice(0, ++index);
+        
+        if (index === currentText.length) {
+            isDeleting = true;
+            setTimeout(type, 2000); // Pause at end
+            return;
+        }
+    } else {
+        letter = currentText.slice(0, --index);
+        
+        if (index === 0) {
+            isDeleting = false;
+            count = (count + 1) % texts.length;
+        }
+    }
 
     document.getElementById('typing-text').textContent = letter;
-    if (letter.length === currentText.length) {
-        setTimeout(() => {
-            index = 0;
-            count++;
-        }, 2000);
-    }
-    setTimeout(type, 200);
+    setTimeout(type, isDeleting ? 100 : 200); // Delete faster than type
 }
 
 // Start typing animation when the page loads

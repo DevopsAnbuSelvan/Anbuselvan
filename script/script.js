@@ -35,7 +35,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 });
 
 // Typing Animation
-const texts = ['iOS App Developer ', 'Android App Developer ', 'Web Developer ', 'Software Developer ', 'DevOps Engineer '];
+const texts = ['Mobile App Developer ', 'Web App Developer ', 'Backend Developer '];
 let count = 0;
 let index = 0;
 let currentText = '';
